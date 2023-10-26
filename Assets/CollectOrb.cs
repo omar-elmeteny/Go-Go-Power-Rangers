@@ -44,6 +44,7 @@ public class CollectOrb : MonoBehaviour
     AudioClip gameSound;
     public AudioClip gameSound2;
     public AudioSource[] audioSource;
+    const bool useGreenBluePowerAtOne = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -112,8 +113,11 @@ public class CollectOrb : MonoBehaviour
             {
 
                 greenEnergy -= 1;
-                if (greenEnergy == 0)
+                var activatePower = greenEnergy > 0 || useGreenBluePowerAtOne;
+                if (!activatePower) 
                 {
+                    // greenEnergy was 1 and not useGreenBluePowerAtOne
+                    // deactivate green power
                     isInGreenForm = false;
                     isInNormalForm = true;
                     gameObject.GetComponent<Renderer>().material = playerColor;
@@ -131,7 +135,8 @@ public class CollectOrb : MonoBehaviour
             else if (isInBlueForm && blueEnergy > 0 && !isBluePowerActive)
             {
                 blueEnergy -= 1;
-                if (blueEnergy == 0)
+                var activatePower = blueEnergy > 0 || useGreenBluePowerAtOne;
+                if (!activatePower)
                 {
                     isInBlueForm = false;
                     isInNormalForm = true;
