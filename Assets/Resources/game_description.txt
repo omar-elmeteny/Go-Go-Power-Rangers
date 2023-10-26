@@ -1,0 +1,24 @@
+Game Description: 
+
+The player must increase his score by collecting as many orbs as possible and energy for each form is gained by collecting the orbs.
+The game ends when the player hits an obstacle in the normal form.
+
+Buttons:
+
+1- Press "Right" or "D" to go right.
+2- Press "Left" or "A" to go left.
+3- Press "J" to switch to the red form.
+4- Press "K" to switch to the green form.
+5- Press "L" to switch to the blue form.
+6- Press "Space" to activate the special power.
+7- Press "Esc" to pause the game.
+
+Orbs:
+
+1- The red power destroys all obstacles when activated.
+2- The green power multiplies energy and score for the first orb collected when activated.
+3- The blue power creates a shield which protects the player from one obstacle hit.
+
+
+
+
